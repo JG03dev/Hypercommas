@@ -116,6 +116,13 @@ alias pc='sudo pacman -Sc' # remove unused cache
 alias po='pacman -Qtdq | sudo pacman -Rns -' # remove unused packages, also try > pacman -Qqd | pacman -Rsu --print -
 alias vc='code'  # gui code editor
 
+# Flatpack integration
+alias fin='flatpak install' # flatpack install package
+alias fun='flatpak uninstall' # flatpack uninstall package
+alias flist='flatpak list' # list installed flatpack packages
+alias fup='flatpak update' # Update flatpack packages
+alias frun='flatpak run' # run specified flatpack package
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
