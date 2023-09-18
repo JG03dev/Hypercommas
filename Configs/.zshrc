@@ -102,10 +102,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias  l='exa -l  --icons'
-alias ls='exa -1  --icons'
-alias ll='exa -la --icons'
-alias ld='exa -lD --icons'
+alias  l='eza -l  --icons'
+alias ls='eza -1  --icons'
+alias ll='eza -la --icons'
+alias ld='eza -lD --icons'
 
 alias in='sudo pacman -S' # install package
 alias un='sudo pacman -Rns' # uninstall package
@@ -129,5 +129,5 @@ alias frun='flatpak run' # run specified flatpack package
 #Display specs
 neofetch
 
-#Display gif
-#kitten icat --align left ~/.config/neofetch/pochita.gif
+#Display random gifs
+#kitten icat --align left $(find $HOME/.config/neofetch/gifs/ -name "*.gif" | sort -R | head -1)

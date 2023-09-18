@@ -1,32 +1,29 @@
 # --// Hyprdots //--
 
-```shell
-        .                                                     
-       / \         _       _  _                  _     _      
-      /^  \      _| |_    | || |_  _ _ __ _ _ __| |___| |_ ___
-     /  _  \    |_   _|   | __ | || | '_ \ '_/ _` / _ \  _(_-<
-    /  | | ~\     |_|     |_||_|\_, | .__/_| \__,_\___/\__/__/
-   /.-'   '-.\                  |__/|_|                       
-
-```
+<p align="center">
+  <img width="250" src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/hyprdots_arch.png">   
+</p>
 
 
 ## My Arch Hyprland Config
 
 https://user-images.githubusercontent.com/106020512/235429801-e8b8dae2-c1ad-4e23-9aa2-b1edb6cabe99.mp4
 
-| <!-- --> | <!-- --> |
-| --- | --- |
-| ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/showcase_1.png) | ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/showcase_2.png) |
-| ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/showcase_3.png) | ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/showcase_4.png) |
+<p align="center">
+    <img align="center" width="49%" src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/showcase_1.png" /> <img align="center" width="49%" src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/showcase_2.png" />   
+    <img align="center" width="49%" src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/showcase_3.png" /> <img align="center" width="49%" src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/showcase_4.png" />   
+</p>
 
 
 ### Installation
 
+The installation script is made for Arch, but **may** work on some Arch based distros.   
+For Debian, please refer **Senshi111**'s version [here](https://github.com/Senshi111/debian-hyprland-hyprdots).
+
 > **Warning**
 >
 > Install script will auto-detect nvidia card and install nvidia-dkms drivers for your kernel.   
-> Nvidia drm will be enabled only in grub and Hyperland is launched by sddm!!
+> Nvidia drm will be enabled in grub, so please [ensure](https://wiki.archlinux.org/title/NVIDIA) your nvidia card supports dkms drivers/hyprland.   
 
 After minimal Arch install (with grub), clone and execute -
 ```shell
@@ -60,6 +57,9 @@ To add your own custom theme, please refer [theming.md](https://github.com/prasa
     - [x] Cyberpunk-Edge
     - [ ] Gruvbox-Retro (maybe later)
     - [ ] Nordic-Blue (maybe later)
+
+- Contributors themes
+    - [x] Frosted-Glass by T-Crypt
 
 | Catppuccin-Mocha |
 | :-: |
@@ -101,17 +101,48 @@ To add your own custom theme, please refer [theming.md](https://github.com/prasa
 | ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_cedge_1.png) |
 | ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_cedge_2.png) |
 
+| Frosted-Glass |
+| :-: |
+| ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_frosted_1.png) |
+| ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_frosted_2.png) |
 
-### Rofi
-| launchers |
+
+### Styles
+
+| Theme Select |
+| :-: |
+| ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_select.png) |
+
+| Wallpaper Select |
+| :-: |
+| ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/walls_select.png) |
+
+| Launcher Style Select |
 | :-: |
 | ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_sel.png) |
+
+| Launcher Styles |
+| :-: |
 | ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_1.png) |
 | ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_2.png) |
 | ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_3.png) |
 | ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_4.png) |
 | ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_5.png) |
 | ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_6.png) |
+| ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_7.png) |
+| ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_8.png) |
+
+| Wlogout Menu |
+| :-: |
+| ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/wlog_style_1.png) |
+| ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/wlog_style_2.png) |
+
+| Game Launchers |
+| :-: |
+| ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/game_launch_1.png) |
+| ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/game_launch_2.png) |
+| ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/game_launch_3.png) |
+| ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/game_launch_4.png) |
 
 
 <details>
@@ -169,7 +200,6 @@ cliphist | clipboard manager
 | :-- | --- |
 polkit-kde-agent | authentication agent
 xdg-desktop-portal-hyprland-git | XDG Desktop Portal
-xdg-desktop-portal-gtk | XDG Desktop Portal file picker
 imagemagick | for kitty/neofetch image processing
 qt5-imageformats | for dolphin thumbnails
 pavucontrol | audio settings gui
@@ -208,37 +238,46 @@ zsh-autosuggestions-git | see completion as you type
 
 | Keys | Action |
 | :--  | :-- |
-| `Super` + `Q`| Quit active/focused window
-| `Super` + `del` | quit hyprland session
-| `Super` + `W` | toggle Window on focus to float
-| `Alt` + `enter` | toggle window on focus to fullscreen
-| `Super` + `G` | disable hypr effects for Gamemode
-| `Super` + `T` | launch kitty Terminal
-| `Super` + `E` | launch dolphin file Explorer
-| `Super` + `V` | launch Vs code
-| `Super` + `F` | launch Firefox
-| `Super` + `A` | launch desktop Applications (rofi)
-| `Super` + `tab` | switch open applications (rofi)
-| `Super` + `R` | browse system files (rofi)
-| `F10` | mute audio output (toggle)
-| `F11` | decrease volume (hold)
-| `F12` | increase volume (hold)
-| `Super` + `L` | lock screen
-| `Super` + `backspace` | logout menu
-| `Super` + `P` | screenshot snip
-| `Super` + `Alt` + `P` | print current screen and save to ~/Apps/grim/
-| `Super` + `RightClick` | resize the window 
-| `Super` + `LeftClick` | change the window position
-| `Super` + `MouseScroll` | cycle through workspaces
-| `Super` + `shift` + `arrows` | resize windows (hold)
-| `Super` + `[0-9]` | switch to workspace [0-9]
-| `Super` + `shift` + `[0-9]` | move active window to workspace [0-9]
-| `Super` + `Alt` + `→` | next wallpaper
-| `Super` + `Alt` + `←` | previous wallpaper
-| `Super` + `Alt` + `↑` | next waybar mode
-| `Super` + `Alt` + `↓` | previous waybar mode
-| `Super` + `shift` + `T` | theme select menu
-| `Super` + `shift` + `A` | rofi style select menu
+| <kbd>Super</kbd> + <kbd>Q</kbd> | quit active/focused window
+| <kbd>Alt</kbd> + <kbd>F4</kbd> | quit active/focused window
+| <kbd>Super</kbd> + <kbd>Del</kbd> | quit hyprland session
+| <kbd>Super</kbd> + <kbd>W</kbd> | toggle window on focus to float
+| <kbd>Alt</kbd> + <kbd>Enter</kbd> | toggle window on focus to fullscreen
+| <kbd>Alt</kbd> + <kbd>J</kbd> | toggle layout
+| <kbd>Super</kbd> + <kbd>G</kbd> | toggle window group
+| <kbd>Super</kbd> + <kbd>T</kbd> | launch kitty terminal
+| <kbd>Super</kbd> + <kbd>E</kbd> | launch dolphin file explorer
+| <kbd>Super</kbd> + <kbd>C</kbd> | launch vscode
+| <kbd>Super</kbd> + <kbd>F</kbd> | launch firefox
+| <kbd>Super</kbd> + <kbd>A</kbd> | launch desktop applications (rofi)
+| <kbd>Super</kbd> + <kbd>Tab</kbd> | switch open applications (rofi)
+| <kbd>Super</kbd> + <kbd>R</kbd> | browse system files (rofi)
+| <kbd>F10</kbd> | mute audio output (toggle)
+| <kbd>F11</kbd> | decrease volume (hold)
+| <kbd>F12</kbd> | increase volume (hold)
+| <kbd>Super</kbd> + <kbd>V</kbd> | clipboard history paste
+| <kbd>Super</kbd> + <kbd>L</kbd> | lock screen
+| <kbd>Super</kbd> + <kbd>Backspace</kbd> | logout menu
+| <kbd>Super</kbd> + <kbd>P</kbd> | screenshot snip
+| <kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>P</kbd> | print current screen
+| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> | launch obs
+| <kbd>Super</kbd> + <kbd>RightClick</kbd> | resize the window 
+| <kbd>Super</kbd> + <kbd>LeftClick</kbd> | change the window position
+| <kbd>Super</kbd> + <kbd>MouseScroll</kbd> | cycle through workspaces
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>←</kbd><kbd>→</kbd><kbd>↑</kbd><kbd>↓</kbd>| resize windows (hold)
+| <kbd>Super</kbd> + <kbd>[0-9]</kbd> | switch to workspace [0-9]
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>[0-9]</kbd> | move active window to workspace [0-9]
+| <kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd> | move window to special workspace
+| <kbd>Super</kbd> + <kbd>S</kbd> | toogle to special workspace
+| <kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>G</kbd> | disable hypr effects for gamemode
+| <kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>→</kbd> | next wallpaper
+| <kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>←</kbd> | previous wallpaper
+| <kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>↑</kbd> | next waybar mode
+| <kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>↓</kbd> | previous waybar mode
+| <kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>D</kbd> | toggle [theme//wall] based colors
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd> | theme select menu
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | wallpaper select menu
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd> | rofi style select menu
 
 </details>
 
@@ -254,30 +293,9 @@ zsh-autosuggestions-git | see completion as you type
 
 
 <details>
-<summary><h4>To-Do</h4></summary>
-
-- [x] Wallpaper change script (ver2)
-- [x] Theme selector script
-- [x] Theme change script (ver2)
-- [x] Update rofi configs
-- [x] Clipboard manager in waybar
-- [x] Add options to install script (ver2)
-- [x] Dynamic waybar config generator script
-- [x] Media control mpris module for waybar
-- [x] Update Volume control script/notification (ver2)
-- [x] Rofi config change script + add new configs
-- [ ] Fix rofi configs/scripts for dynamic scaling
-- [ ] Make wlogout configs dynamic and sync with theme
-- [ ] Sync PC/keyboard hw rgb with current theme (themeswitch.sh + openrgb)
-- [ ] Add battery and brightness indicator/notification for laptop users
-- [ ] Replace waybar with Eww? (maybe later)
-
-</details>
-
-
-<details>
 <summary><h4>Known Issues</h4></summary>
 
+- [ ] Few scaling issues with rofi configs, as they are created based on my ultrawide (21:9) display.
 - [ ] Random lockscreen crash, refer https://github.com/swaywm/sway/issues/7046
 - [ ] Waybar launching rofi breaks mouse input (added `sleep 0.1` as workaround), refer https://github.com/Alexays/Waybar/issues/1850
 - [ ] Flatpak QT apps does not follow system theme

@@ -1,12 +1,8 @@
 # --// Hyprdots Theming //--
 
-```shell
-      _  _    _____               _     _          _____ _             _              _  _ 
-     / |/ |  |  |  |_ _ ___ ___ _| |___| |_ ___   |_   _| |_ ___ _____|_|___ ___     / |/ |
-    / // /   |     | | | . |  _| . | . |  _|_ -|    | | |   | -_|     | |   | . |   / // / 
-   |_/|_/    |__|__|_  |  _|_| |___|___|_| |___|    |_| |_|_|___|_|_|_|_|_|_|_  |  |_/|_/  
-                   |___|_|                                                  |___|          
-```
+<p align="center">
+  <img width="100" src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/hyprdots_logo.png">
+</p>
 
 
 ## Theme Structure
@@ -72,7 +68,7 @@ These are the applications currently supported by the `themeswitch.sh` script
 - [rofi](#rofi)
 - [flatpak](#flatpak)
 - [swww](#swww)
-- wlogout (to be added later)
+- [wlogout](#wlogout)
 
 
 ### GTK apps
@@ -102,10 +98,6 @@ The global theme settings are configured in `~/.config/hypr/themes/My-Fav-Theme.
 - gtk theme and icons
 - kavantum theme
 - fonts (gtk)
-
-> **Note**
->
-> [rofi](#rofi) and [waybar](#waybar-style) configuration adapts to the font, icon and rounding values set in `~/.config/hypr/themes/My-Fav-Theme.conf`   
 
 
 ### Waybar
@@ -138,7 +130,7 @@ So you can create your preferred config by adding entries to this file as,
 ```
 where `|` is the delimiter and column,
 1. is `0` or `1`, where `1` indicates the current mode in use
-2. is to set height of the bar (use `0` for default min height or `<blank>` to auto-scale for 3% of monitor res)
+2. is to set height of the bar (leave it empty `<blank>` to auto-scale for 3% of monitor res), the font size adapts to this height value.
 3. is postition of bar top/bottom
 4. is the left modules
 5. is the center modules
@@ -188,15 +180,29 @@ where column,
 3. is the Dir/Wallpaper to be used for `My-Fav-Theme`
 
 The `swwwallpaper.sh` script is used to cycle through all the wallpapers in the directory, it also automatically updates (column 3) this control file with the current wallpaper used.   
+This will also generate thimbnails in `~/.config/swww/.cache` directory, so if you add new wallpapers just execute the `swwwallpaper.sh` script to loop through the new wallpapers to build the thumbnail cache.   
 
 ```shell
-❯ cd ~/.config/swww
+❯ cd ~/.config/hypr/scripts
 ❯ ./swwwallpaper.sh -n   # to set next wallpaper
 ❯ ./swwwallpaper.sh -p   # to set previous wallpaper
 ```
 > **Note**
 >
 > Please add this theme/wallpaper entry in `wall.ctl` file only after all [these](#theme-structure) theme files are configured.
+
+The `swwwallselect.sh` script is used to cycle through all the wallpapers in the directory set for the current theme.   
+
+```shell
+❯ cd ~/.config/hypr/scripts
+❯ ./swwwallselect.sh   # launch wallpaper select menu
+```
+
+### Wlogout
+
+To add you own logout style create corresding `~/.config/wlogout/layout_<n>` and `~/.config/wlogout/style_<n>` file, use existing `layout_1` and `style_1` as a reference.   
+Its is launched by `~/.config/hypr/scripts/logoutlaunch.sh <n>` script, where `<n>` is your style number.   
+Here the colors and border-radius is auto detected from current hypr theme.   
 
 
 ## Theme Switch
@@ -216,11 +222,9 @@ It loops through all the themes (column 2) listed in the control file `~/.config
 
 The `themeselect.sh` script can be used to launch a rofi menu for selecting and applying a theme from the list of available themes.   
 This list source themes from `~/.config/swww/wall.ctl` and triggers `themeswitch.sh` script to apply it.   
-Thumbnails used in this rofi theme select menu can be refresed based on the current wallpapers linked to its corresponding theme.   
 
 ```shell
 ❯ cd ~/.config/hypr/scripts
 ❯ ./themeselect.sh   # launch theme select menu
-❯ ./themeselect.sh T   # refresh thumbnails for theme select menu
 ```
 
